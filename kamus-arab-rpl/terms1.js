@@ -172,7 +172,7 @@ const T1 = String.raw`1|مَدْرَسَةٌ|madrasah|sekolah|Sekolah & Pembelaj
 171|CSS|si-es-es|bahasa gaya tampilan web|Website & Aplikasi|الْمَوَاقِعُ وَالتَّطْبِيقَاتُ
 172|JavaScript|jawaskrip|bahasa skrip web interaktif|Website & Aplikasi|الْمَوَاقِعُ وَالتَّطْبِيقَاتُ
 173|PHP|pi-ec-pi|bahasa pemrograman sisi server|Website & Aplikasi|الْمَوَاقِعُ وَالتَّطْبِيقَاتُ
-174|API|ei-pi-ai|antarmuka pemrograman aplikasi|Website & Aplikasi|الْمَوَاقِعُ وَالتَّطْبِIKATAN
+174|API|ei-pi-ai|antarmuka pemrograman aplikasi|Website & Aplikasi|الْمَوَاقِعُ وَالتَّطْبِيقَاتُ
 175|Laravel|laravel|framework PHP|Website & Aplikasi|الْمَوَاقِعُ وَالتَّطْبِيقَاتُ
 176|Bootstrap|butstrap|framework CSS|Website & Aplikasi|الْمَوَاقِعُ وَالتَّطْبِيقَاتُ
 177|WordPress|wordpres|sistem pengelola konten (CMS)|Website & Aplikasi|الْمَوَاقِعُ وَالتَّطْبِيقَاتُ
