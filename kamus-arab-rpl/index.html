@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#0b1320">
+<meta name="description" content="Kamus Saku Bahasa Arab untuk Siswa SMK Muhammadiyah Pencongan, Jurusan Rekayasa Perangkat Lunak (RPL).">
+<title>قَامُوسُ الْجَيْبِ · Kamus Saku Bahasa Arab RPL</title>
+<style>
+:root{--bg:#07111f;--panel:#0c1a2b;--panel2:#102238;--text:#eff6ff;--muted:#9eb1c7;--line:rgba(255,255,255,.09);--gold:#e7bf69;--cyan:#61d8d0;--green:#66d5a1;--danger:#ff8f8f;--shadow:0 16px 50px rgba(0,0,0,.28);--r:22px}
+:root.light{--bg:#f5f8fc;--panel:#fff;--panel2:#edf4fa;--text:#102031;--muted:#607086;--line:rgba(16,32,49,.12);--gold:#9a6c12;--cyan:#0b817f;--green:#14724d;--shadow:0 14px 40px rgba(27,47,70,.12)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(circle at top right,rgba(97,216,208,.08),transparent 30%),linear-gradient(180deg,var(--bg),var(--bg));color:var(--text);font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.55}button,input{font:inherit}button{cursor:pointer}
+.app{max-width:1260px;margin:auto;padding:18px 16px 64px}.topbar{position:sticky;top:0;z-index:50;backdrop-filter:blur(18px);background:color-mix(in srgb,var(--bg) 82%,transparent);border-bottom:1px solid var(--line);margin:0 -16px;padding:12px 16px}.topbar-inner{max-width:1228px;margin:auto;display:flex;gap:10px;align-items:center}.brand{display:flex;align-items:center;gap:10px;min-width:0}.brand-mark{width:42px;height:42px;border:1px solid var(--line);border-radius:13px;display:grid;place-items:center;background:linear-gradient(135deg,var(--panel2),transparent);color:var(--cyan);font-weight:900}.brand-copy{min-width:0}.brand-copy strong{display:block;font-size:14px;letter-spacing:.03em}.brand-copy small{display:block;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.toolbar{margin-left:auto;display:flex;gap:8px}.icon-btn,.ghost-btn{border:1px solid var(--line);background:var(--panel);color:var(--text);border-radius:12px;padding:9px 11px}.icon-btn:hover,.ghost-btn:hover{border-color:color-mix(in srgb,var(--cyan) 45%,var(--line))}
+.hero{margin-top:18px;padding:28px;border:1px solid var(--line);border-radius:28px;background:linear-gradient(140deg,color-mix(in srgb,var(--panel2) 90%,transparent),var(--panel));box-shadow:var(--shadow);position:relative;overflow:hidden}.hero:after{content:"RPL";position:absolute;right:-10px;top:-28px;font-size:170px;font-weight:900;color:rgba(255,255,255,.025);pointer-events:none}.eyebrow{color:var(--cyan);font-weight:800;letter-spacing:.12em;text-transform:uppercase;font-size:12px}.hero h1{font-size:clamp(24px,4vw,46px);margin:10px 0 4px}.arabic-title{font-family:"Noto Naskh Arabic","Amiri","Scheherazade New",serif;font-size:clamp(30px,5vw,58px);direction:rtl;text-align:left;color:var(--gold);margin:2px 0}.subtitle{font-size:18px;font-weight:700}.meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}.pill{padding:8px 12px;border:1px solid var(--line);border-radius:999px;background:rgba(255,255,255,.03);color:var(--muted);font-size:13px}.student-line{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:18px}.field{border-bottom:1px solid var(--line);padding:8px 2px;color:var(--muted)}
+.controls{display:grid;grid-template-columns:1fr;gap:10px;margin:18px 0}.search-wrap{position:relative}.search{width:100%;padding:15px 46px 15px 16px;border:1px solid var(--line);border-radius:16px;background:var(--panel);color:var(--text);outline:none}.search:focus{border-color:var(--cyan);box-shadow:0 0 0 4px rgba(97,216,208,.08)}.search-clear{position:absolute;right:8px;top:7px;width:35px;height:35px;border:0;border-radius:10px;background:transparent;color:var(--muted);display:none}.search-clear.show{display:block}.chips{display:flex;gap:8px;overflow:auto;padding-bottom:3px}.chip{flex:0 0 auto;padding:9px 12px;border-radius:999px;border:1px solid var(--line);background:var(--panel);color:var(--muted)}.chip.active{background:var(--cyan);color:#052120;border-color:transparent;font-weight:800}
+.layout{display:grid;grid-template-columns:270px 1fr;gap:18px}.sidebar{position:sticky;top:74px;align-self:start}.side-card{background:var(--panel);border:1px solid var(--line);border-radius:20px;padding:14px}.side-card h3{margin:0 0 10px;font-size:13px;color:var(--muted);text-transform:uppercase;letter-spacing:.08em}.side-link{width:100%;text-align:left;border:0;background:transparent;color:var(--text);padding:10px 9px;border-radius:11px}.side-link:hover{background:var(--panel2)}.side-link b{color:var(--cyan)}.main{min-width:0}.section{margin-bottom:22px;scroll-margin-top:90px}.section-head{display:flex;align-items:end;justify-content:space-between;gap:12px;margin-bottom:11px}.section-head h2{margin:0;font-size:20px}.section-head .ar{font-family:"Noto Naskh Arabic","Amiri",serif;direction:rtl;color:var(--gold);font-size:22px}.section-note{color:var(--muted);font-size:13px}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.card{border:1px solid var(--line);background:linear-gradient(180deg,var(--panel),color-mix(in srgb,var(--panel2) 45%,var(--panel)));border-radius:18px;padding:14px;position:relative;transition:.18s transform,.18s border-color,.18s box-shadow}.card:hover{transform:translateY(-2px);border-color:rgba(97,216,208,.24);box-shadow:var(--shadow)}.card.hidden{display:none}.num{font-size:11px;color:var(--muted);font-weight:800}.ar-word{font-family:"Noto Naskh Arabic","Amiri","Scheherazade New",serif;font-size:29px;line-height:1.25;direction:rtl;text-align:right;margin:7px 0 2px}.latin{color:var(--green);font-style:italic;font-size:13px}.meaning{margin-top:5px;font-weight:700}.card-tools{display:flex;gap:6px;position:absolute;top:10px;right:10px}.mini{border:1px solid var(--line);background:rgba(255,255,255,.025);color:var(--muted);border-radius:9px;padding:5px 7px;font-size:12px}.mini.star.active{color:var(--gold)}
+.empty{padding:30px;text-align:center;color:var(--muted);border:1px dashed var(--line);border-radius:18px}
+.info{background:var(--panel);border:1px solid var(--line);border-radius:20px;padding:18px}.info h3{margin-top:0}.info-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}.info-box{background:var(--panel2);border-radius:16px;padding:13px}.info-box strong{color:var(--gold)}.info-box .ar{font-family:"Noto Naskh Arabic","Amiri",serif;font-size:25px;direction:rtl}
+.verb-row{display:grid;grid-template-columns:1.05fr .85fr .85fr 1fr;gap:8px;padding:11px 0;border-bottom:1px solid var(--line);align-items:center}.verb-row:last-child{border-bottom:0}.label{font-weight:800}.verb-ar{font-family:"Noto Naskh Arabic","Amiri",serif;font-size:24px;direction:rtl;text-align:right}.trans{color:var(--muted);font-size:12px;font-style:italic}.phrase,.example{padding:14px;border:1px solid var(--line);background:var(--panel);border-radius:18px;margin-bottom:9px}.phrase .ar,.example .ar{font-family:"Noto Naskh Arabic","Amiri",serif;font-size:24px;direction:rtl;text-align:right}.phrase .title,.example .title{font-size:12px;font-weight:900;color:var(--cyan);letter-spacing:.06em;text-transform:uppercase}.latin-list{display:grid;grid-template-columns:repeat(3,1fr);gap:9px}.latin-item{display:flex;justify-content:space-between;gap:10px;padding:10px 12px;border:1px solid var(--line);border-radius:13px;background:var(--panel)}.latin-item b{font-size:13px}.latin-item span{color:var(--muted);font-size:12px}
+.footer{margin-top:28px;padding:18px 0;color:var(--muted);font-size:12px;text-align:center;border-top:1px solid var(--line)}
+@media(max-width:900px){.layout{grid-template-columns:1fr}.sidebar{position:static;order:2}.grid{grid-template-columns:1fr}.latin-list{grid-template-columns:1fr 1fr}.verb-row{grid-template-columns:1fr 1fr}.hero{padding:22px}.topbar-inner{gap:7px}.brand-copy small{max-width:40vw}}
+@media(max-width:560px){.app{padding:12px 11px 48px}.topbar{margin:0 -11px;padding:10px 11px}.brand-mark{width:38px;height:38px}.toolbar .ghost-btn{display:none}.student-line{grid-template-columns:1fr}.info-grid,.latin-list{grid-template-columns:1fr}.hero h1{font-size:28px}.arabic-title{font-size:36px}.subtitle{font-size:15px}.ar-word{font-size:27px}.verb-row{grid-template-columns:1fr;gap:5px}.verb-row .verb-ar{text-align:right}.section-head{align-items:start;flex-direction:column}.side-card{display:none}}
+body.large-text .card{font-size:1.08rem}body.large-text .ar-word{font-size:34px}body.large-text .phrase .ar,body.large-text .example .ar{font-size:28px}
+</style>
+</head>
+<body>
+<div class="topbar">
+  <div class="topbar-inner">
+    <div class="brand">
+      <div class="brand-mark">&lt;/&gt;</div>
+      <div class="brand-copy"><strong>قَامُوسُ الْجَيْبِ · RPL</strong><small>SMK Muhammadiyah Pencongan</small></div>
+    </div>
+    <div class="toolbar">
+      <button class="icon-btn" id="themeBtn" title="Mode gelap/terang">◐</button>
+      <button class="icon-btn" id="fontBtn" title="Perbesar teks">A+</button>
+    </div>
+  </div>
+</div>
+<div class="app">
+  <section class="hero" id="home">
+    <div class="eyebrow">SMK MUHAPEN · RPL</div>
+    <div class="arabic-title">قَامُوسُ الْجَيْبِ</div>
+    <div style="font-family:'Noto Naskh Arabic','Amiri',serif;font-size:20px;direction:rtl;color:var(--muted)">لِطُلَّابِ هَنْدَسَةِ الْبَرْمَجِيَّاتِ</div>
+    <h1>KAMUS SAKU <span style="color:var(--cyan)">BAHASA ARAB</span></h1>
+    <div class="subtitle">untuk Siswa SMK Muhammadiyah Pencongan · Jurusan Rekayasa Perangkat Lunak (RPL)</div>
+    <div class="meta">
+      <span class="pill">373 istilah</span><span class="pill">50 kata kerja</span><span class="pill">52 ungkapan</span>
+    </div>
+    <div class="student-line"><div class="field">Nama&nbsp;&nbsp;: __________________</div><div class="field">Kelas&nbsp;: __________________</div></div>
+  </section>
+
+  <section class="section" id="petunjuk">
+    <div class="section-head"><h2>Petunjuk Penggunaan</h2><div class="ar">إِرْشَادَاتُ الِاسْتِخْدَامِ</div></div>
+    <div class="info">
+      <h3>Baca sekali, pakai seumur sekolah</h3>
+      <div class="info-grid">
+        <div class="info-box"><strong>1. CARA MEMBACA ENTRI</strong><p><b>No.</b> entri dipakai pada <b>Indeks Alfabetis</b> di bagian belakang.</p><p>Tulisan Latin berwarna <b style="color:var(--green)">hijau-biru</b> = istilah Inggris yang dipertahankan; kolom tengah berisi cara bacanya.</p><p>Entri tunggal memakai tanwin (بَرْمَجَةٌ) dan transliterasi tanpa harakat akhir. Pada kalimat, harakat akhir dituliskan dan kalimat dibaca <i>waqaf</i> di akhir.</p><p>Kata kerja ditulis: lampau – kini – mashdar, dibaca dari kanan ke kiri.</p><p>(putra) / (putri) menunjukkan bentuk untuk laki-laki / perempuan.</p></div>
+        <div class="info-box"><strong>2. ISI KAMUS</strong><p><b>01</b> Sekolah & Pembelajaran · no. 1–38</p><p><b>02</b> Komputer · no. 39–75</p><p><b>03</b> Rekayasa Perangkat Lunak · no. 76–113</p><p><b>04</b> Pemrograman · no. 114–158</p><p><b>05</b> Website & Aplikasi · no. 159–201</p><p><b>06</b> Database · no. 202–233</p><p><b>07</b> Jaringan & Internet · no. 234–266</p><p><b>08</b> Hardware & Software · no. 267–301</p><p><b>09</b> Keamanan Digital · no. 302–338</p><p><b>10</b> Aktivitas Siswa RPL · no. 339–373</p></div>
+      </div>
+      <div class="info-grid" style="margin-top:10px">
+        <div class="info-box"><strong>3. PEDOMAN TRANSLITERASI</strong><p>ث = ts · ح = h · خ = kh · ذ = dz · ش = sy · ص = sh · ض = dh · ط = th · ظ = zh · ع = ' · غ = gh · ق = q</p><p>ā ī ū = vokal panjang; <b>'</b> = hamzah / 'ain; ة = h (t pada rangkaian kata, contoh: handasat).</p><p>Huruf rangkap = tasydid (contoh: mu'allim). <i>al-</i> ditulis menyesuaikan bunyi (contoh: an-nizhām). Arab Modern Standar (فُصْحَى). Gunakan font Amiri / Noto Naskh Arabic bila membuka berkas ini di perangkat lain.</p></div>
+        <div class="info-box"><strong>Kosakata Tematik</strong><div style="font-size:26px;font-family:'Noto Naskh Arabic','Amiri',serif;direction:rtl">الْمُفْرَدَاتُ الْمَوْضُوعِيَّةُ</div><p>373 istilah dalam 10 kelompok</p></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="controls">
+    <div class="search-wrap"><input id="search" class="search" placeholder="Cari Arab, transliterasi, arti Indonesia, atau nomor entri…" autocomplete="off"><button id="clearSearch" class="search-clear">×</button></div>
+    <div class="chips" id="chips"></div>
+  </div>
+
+  <div class="layout">
+    <aside class="sidebar">
+      <div class="side-card"><h3>Menu</h3>
+        <button class="side-link" data-nav="terms"><b>01</b> Kosakata Tematik</button>
+        <button class="side-link" data-nav="verbs"><b>02</b> Kata Kerja Penting</button>
+        <button class="side-link" data-nav="phrases"><b>03</b> Ungkapan Praktis</button>
+        <button class="side-link" data-nav="examples"><b>04</b> Contoh Kalimat</button>
+        <button class="side-link" data-nav="index"><b>05</b> Indeks Alfabetis</button>
+      </div>
+    </aside>
+
+    <main class="main">
+      <section class="section" id="terms"><div class="section-head"><div><h2>Kosakata Tematik</h2><div class="section-note">Cari cepat 373 istilah berdasarkan tema atau kata.</div></div><div class="ar">الْمُفْرَدَاتُ الْمَوْضُوعِيَّةُ</div></div><div id="termSections"></div><div id="termEmpty" class="empty" style="display:none">Tidak ada entri yang cocok.</div></section>
+      <section class="section" id="verbs"><div class="section-head"><div><h2>Kata Kerja Penting</h2><div class="section-note">lampau – kini – mashdar</div></div><div class="ar">الْأَفْعَالُ الْمُهِمَّةُ</div></div><div class="info"><div id="verbsList"></div></div></section>
+      <section class="section" id="phrases"><div class="section-head"><div><h2>Ungkapan Praktis</h2><div class="section-note">52 ungkapan untuk belajar & praktik</div></div><div class="ar">تَعَابِيرُ عَمَلِيَّةٌ</div></div><div id="phrasesList"></div></section>
+      <section class="section" id="examples"><div class="section-head"><div><h2>Contoh Kalimat</h2><div class="section-note">istilah penting dalam kalimat sederhana</div></div><div class="ar">أَمْثِلَةُ الْجُمَلِ</div></div><div id="examplesList"></div></section>
+      <section class="section" id="index"><div class="section-head"><div><h2>Indeks Alfabetis</h2><div class="section-note">angka = nomor entri pada Kosakata Tematik</div></div><div class="ar">الْفِهْرِسُ الْهِجَائِيُّ</div></div><div class="latin-list" id="arabicIndex"></div><h2 style="margin:24px 0 11px">Istilah Latin (A–Z)</h2><div class="latin-list" id="latinIndex"></div></section>
+    </main>
+  </div>
+  <div class="footer">قَامُوسُ الْجَيْبِ · KAMUS SAKU BAHASA ARAB · SMK MUHAPEN · RPL</div>
+</div>
+<script src="terms1.js"></script>
+<script src="terms2.js"></script>
+<script src="extras.js"></script>
+<script>
+const CATS=[...new Set(KAMUS_TERMS.map(x=>x.cat))];
+const $=s=>document.querySelector(s);const $$=s=>[...document.querySelectorAll(s)];
+const favKey="kamus-rpl-favs";
+const favs=new Set(JSON.parse(localStorage.getItem(favKey)||"[]"));
+let activeCat="Semua", query="";
+function esc(s){return String(s).replace(/[&<>"']/g,m=>({"&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"}[m]))}
+function speak(text){if(!("speechSynthesis"in window))return;const u=new SpeechSynthesisUtterance(text);u.lang="ar-SA";u.rate=.82;speechSynthesis.cancel();speechSynthesis.speak(u)}
+function copyText(text){navigator.clipboard?.writeText(text).then(()=>toast("Disalin"))}
+function toast(msg){let t=document.getElementById("toast");if(!t){t=document.createElement("div");t.id="toast";Object.assign(t.style,{position:"fixed",left:"50%",bottom:"24px",transform:"translateX(-50%)",padding:"10px 14px",borderRadius:"12px",background:"var(--panel2)",color:"var(--text)",border:"1px solid var(--line)",zIndex:100});document.body.appendChild(t)}t.textContent=msg;t.style.display="block";clearTimeout(window.__toast);window.__toast=setTimeout(()=>t.style.display="none",1400)}
+function renderChips(){const box=$("#chips");box.innerHTML=['Semua',...CATS].map(c=>`<button class="chip ${c===activeCat?"active":""}" data-cat="${esc(c)}">${esc(c)}</button>`).join("");}
+function matchTerm(x){const q=query.toLowerCase().trim();if(!q)return true;return [x.n,x.ar,x.trans,x.id,x.cat].join(" ").toLowerCase().includes(q)}
+function card(x){const active=favs.has(String(x.n));return `<article class="card term-card" data-id="${x.n}" data-text="${esc([x.ar,x.trans,x.id].join(" "))}"><div class="card-tools"><button class="mini star ${active?"active":""}" data-fav="${x.n}" title="Favorit">★</button><button class="mini" data-speak="${esc(x.ar)}" title="Dengarkan">🔊</button><button class="mini" data-copy="${esc(x.ar)}" title="Salin Arab">⧉</button></div><div class="num">${x.n}</div><div class="ar-word">${esc(x.ar)}</div><div class="latin">${esc(x.trans)}</div><div class="meaning">${esc(x.id)}</div></article>`}
+function renderTerms(){const root=$("#termSections");root.innerHTML=CATS.map(cat=>{const items=KAMUS_TERMS.filter(x=>x.cat===cat&&matchTerm(x));const all=KAMUS_TERMS.filter(x=>x.cat===cat).length;if(activeCat!=="Semua"&&activeCat!==cat)return "";if(!items.length)return "";const head=items[0];return `<section class="section" id="cat-${slug(cat)}"><div class="section-head"><div><h2>${esc(cat)}</h2><div class="section-note">${items.length===all?all+" entri":items.length+" / "+all+" entri"}</div></div><div class="ar">${esc(head.arCat||"")}</div></div><div class="grid">${items.map(card).join("")}</div></section>`}).join("");$("#termEmpty").style.display=root.innerHTML?"none":"block"}
+function slug(s){return s.toLowerCase().replace(/[^a-z0-9]+/g,"-")}
+function renderVerbs(){verbsList.innerHTML=KAMUS_VERBS.map(v=>`<div class="verb-row"><div class="label">${esc(v.id)}</div><div><div class="verb-ar">${esc(v.mashdar)}</div><div class="trans">${esc(v.mashdarT)}</div></div><div><div class="verb-ar">${esc(v.mudhari)}</div><div class="trans">${esc(v.mudhariT)}</div></div><div><div class="verb-ar">${esc(v.madi)}</div><div class="trans">${esc(v.madiT)}</div></div></div>`).join("")}
+function renderPhrases(){phrasesList.innerHTML=KAMUS_PHRASES.map((p,i)=>`<article class="phrase"><div class="title">${String(i+1).padStart(2,"0")} · ${esc(p.section)}</div><div class="ar">${esc(p.ar)}</div><div class="latin">${esc(p.trans)}</div><div class="meaning">${esc(p.id)}</div></article>`).join("")}
+function renderExamples(){examplesList.innerHTML=KAMUS_EXAMPLES.map(e=>`<article class="example"><div class="title">${esc(e.title)}</div><div class="ar">${esc(e.ar)}</div><div class="latin">${esc(e.trans)}</div><div class="meaning">${esc(e.id)}</div></article>`).join("")}
+const AR_ORDER=["ا","ب","ت","ث","ج","ح","خ","د","ذ","ر","ز","س","ش","ص","ض","ط","ظ","ع","غ","ف","ق","ك","ل","م","ن","ه","و","ي"];
+function firstLetter(s){return (s.replace(/^الْ|^ال|^أ|^إ|^آ/,"").trim()[0]||"ا")}
+function renderIndex(){const sorted=[...KAMUS_TERMS].sort((a,b)=>a.ar.localeCompare(b.ar,"ar"));arabicIndex.innerHTML=sorted.map(x=>`<div class="latin-item"><b dir="rtl" style="font-family:'Noto Naskh Arabic','Amiri',serif;font-size:18px">${esc(x.ar)}</b><span>${x.n}</span></div>`).join("");const latin=[...KAMUS_TERMS.filter(x=>/^[A-Za-z]/.test(x.ar))].sort((a,b)=>a.ar.localeCompare(b.ar));latinIndex.innerHTML=latin.map(x=>`<div class="latin-item"><b>${esc(x.ar)}</b><span>${x.n}</span></div>`).join("")}
+$("#search").addEventListener("input",e=>{query=e.target.value;$("#clearSearch").classList.toggle("show",!!query);renderTerms()});
+$("#clearSearch").onclick=()=>{$("#search").value="";query="";$("#clearSearch").classList.remove("show");renderTerms();$("#search").focus()};
+$("#chips").addEventListener("click",e=>{const b=e.target.closest("[data-cat]");if(!b)return;activeCat=b.dataset.cat;renderChips();renderTerms()});
+document.addEventListener("click",e=>{const fav=e.target.closest("[data-fav]");if(fav){const k=fav.dataset.fav;favs.has(k)?favs.delete(k):favs.add(k);localStorage.setItem(favKey,JSON.stringify([...favs]));renderTerms()}const sp=e.target.closest("[data-speak]");if(sp)speak(sp.dataset.speak);const cp=e.target.closest("[data-copy]");if(cp)copyText(cp.dataset.copy);const nav=e.target.closest("[data-nav]");if(nav){document.getElementById(nav.dataset.nav)?.scrollIntoView({behavior:"smooth"})}});
+$("#themeBtn").onclick=()=>{document.documentElement.classList.toggle("light");localStorage.setItem("kamus-theme",document.documentElement.classList.contains("light")?"light":"dark")};
+$("#fontBtn").onclick=()=>{document.body.classList.toggle("large-text");localStorage.setItem("kamus-large",document.body.classList.contains("large-text")?"1":"0")};
+if(localStorage.getItem("kamus-theme")==="light")document.documentElement.classList.add("light");
+if(localStorage.getItem("kamus-large")==="1")document.body.classList.add("large-text");
+renderChips();renderTerms();renderVerbs();renderPhrases();renderExamples();renderIndex();
+</script>
+</body></html>
