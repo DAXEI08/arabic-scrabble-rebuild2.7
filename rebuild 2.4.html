@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>سكرابل عربي</title>
+<title>Arabic Scrabble</title>
 <style>
 /* One embedded font set for every device: Amiri (Arabic) + Tinos (Latin, digits, punctuation). No system fonts are used, so desktop and mobile look identical. */
 @font-face{font-family:'ScrabbleMix';font-weight:400;font-display:block;
@@ -25,9 +25,9 @@ html,body{margin:0}
 body{font-family:var(--font);color:var(--ivory);min-height:100dvh;padding:max(8px,env(safe-area-inset-top)) 8px max(8px,env(safe-area-inset-bottom));
 background:radial-gradient(ellipse at top,#4a2d1b,#24150c 70%) fixed;font-size:18px}
 .app{max-width:760px;margin:auto;display:grid;grid-template-columns:minmax(0,1fr);gap:10px}
-header{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
-h1{margin:0;font-size:2rem;color:var(--gold);text-shadow:0 2px 4px #0008}
-.by{opacity:.55;font-size:.85rem}.bag{margin-inline-start:auto;font-size:1rem;opacity:.9}
+header{display:flex;flex-direction:column;align-items:center;gap:2px}
+h1{margin:0;font-size:2rem;color:var(--gold);text-shadow:0 2px 4px #0008;direction:ltr;text-transform:uppercase;letter-spacing:.12em;line-height:1.1}
+.by{opacity:.55;font-size:.85rem}.bag{margin-top:8px;text-align:center;font-size:1rem;opacity:.9;min-height:1.2em}
 .boardWrap{min-width:0}
 .board{container-type:inline-size;--lf:4.6cqw;--vf:1.8cqw;display:grid;grid-template:repeat(15,minmax(0,1fr))/repeat(15,minmax(0,1fr));aspect-ratio:1;width:100%;max-width:720px;margin-inline:auto;
 padding:1.2%;border-radius:10px;background:linear-gradient(135deg,#6b4428,#4a2c18);border:3px solid #2a170b;box-shadow:0 10px 30px #000a,inset 0 0 0 2px #b8893f55}
@@ -36,7 +36,7 @@ box-shadow:inset 0 1px 0 #fff3,inset 0 -1px 2px #0004;user-select:none;cursor:po
 .sq,.slot,.btn{touch-action:manipulation}
 .sq:focus-visible,.slot:focus-visible,.tile:focus-visible,.btn:focus-visible,#jB input:focus-visible{outline:3px solid var(--gold);outline-offset:1px;z-index:3}
 .k0{background:#b98f58}.k1{background:#6f9db0}.k2{background:#2f6b8a}.k3{background:#b9606b}.k4{background:#8e2a36}.k5{background:#c9a227;color:#3b2a05}
-.k5 .pl{font-size:.82em;gap:0}
+.k5 .pl{font-size:1.25em;gap:0}
 .pl{display:grid;gap:.1em;text-align:center;pointer-events:none}.pl .m{direction:ltr;unicode-bidi:isolate}
 .sq.has{box-shadow:none}.sq.drop{outline:2px dashed var(--gold)}
 .tile{position:absolute;inset:0;display:grid;place-items:center;border-radius:12%;color:var(--green);font-weight:700;cursor:pointer;
@@ -102,15 +102,16 @@ dialog form{display:flex;gap:8px}dialog form .btn{flex:1}
 button,input,textarea,select{font-family:inherit}
 #jB input{font:inherit;padding:8px 10px;border-radius:8px;border:1px solid #d4af3799;background:#1a0f08;color:var(--ivory);width:100%}
 .vrow{display:grid;grid-template-columns:1fr 1fr;gap:8px}
-@media(max-width:420px){body{font-size:16px;padding-inline:4px}h1{font-size:1.6rem}.btn{font-size:.9rem}}
+@media(max-width:420px){body{font-size:16px;padding-inline:4px}h1{font-size:1.4rem}.btn{font-size:.9rem}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
 </style>
 </head>
 <body>
 <main class="app">
-<header><h1>سكرابل عربي</h1><span class="by">by esbepe</span><span id="bagInfo" class="bag"></span></header>
+<header><h1>Arabic Scrabble</h1><span class="by">by esbepe</span></header>
 <section class="boardWrap">
 <div id="board" class="board" role="grid" aria-label="لوح اللعب"></div>
+<div id="bagInfo" class="bag"></div>
 </section>
 <section class="side">
 <div id="toast" role="status" aria-live="polite"></div>
@@ -145,7 +146,7 @@ const ALPHA = 'ءآأؤإئابةتثجحخدذرزسشصضطظعغفقكلمن�
 const HALF = ['400100040001004','030002000200030','003000101000300','100300010003001','000030000030000','020002000200020','001000101000100','400100050001004'];
 const LAYOUT = [...HALF, ...HALF.slice(0, 7).reverse()].map(s => [...s].map(Number));
 const LABEL = {1:'x2 حرف',2:'x3 حرف',3:'x2 كلمة',4:'x3 كلمة',5:'x2 كلمة'}; // full text everywhere; the centre star is a word x2
-const sqHTML = k => { if (!LABEL[k]) return ''; const [m, w] = LABEL[k].split(' '); return `<span class="pl">${k === 5 ? '<span>نجمة</span>' : ''}<span class="m">${m}</span><span>${w}</span></span>`; };
+const sqHTML = k => { if (!LABEL[k]) return ''; const [m, w] = LABEL[k].split(' '); return k === 5 ? '<span class="pl"><span>نجمة</span></span>' : `<span class="pl"><span class="m">${m}</span><span>${w}</span></span>`; };
 const NAMES = ['اللاعب الأول', 'اللاعب الثاني'];
 const REASONS = {time:'انتهى وقت أحد اللاعبين', rack:'أنهى أحد اللاعبين جميع قطعه والكيس فارغ', idle:'تتابع التمرير/التبديل دون تسجيل نقاط'};
 
@@ -435,7 +436,7 @@ function renderBoard() {
     const h = t ? tileHTML(t) : sqHTML(k);
     if (el._h === h) return;
     el._h = h; el.className = 'sq k' + k + (t ? ' has' : ''); el.innerHTML = h;
-    el.setAttribute('aria-label', t ? (t.blank ? t.as : t.l) : (LABEL[k] ? 'مربع ' + (k === 5 ? 'نجمة ' : '') + LABEL[k] : 'مربع فارغ'));
+    el.setAttribute('aria-label', t ? (t.blank ? t.as : t.l) : (LABEL[k] ? (k === 5 ? 'مربع نجمة' : 'مربع ' + LABEL[k]) : 'مربع فارغ'));
   });
 }
 function renderPlayers() {
