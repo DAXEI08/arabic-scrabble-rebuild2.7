@@ -98,7 +98,7 @@ const T2 = String.raw`202|قَاعِدَةُ بَيَانَاتٍ|qā'idat bayā
 298|Linux|linuks|sistem operasi sumber terbuka|Hardware & Software|الْعَتَادُ وَالْبَرَامِجُ
 299|Android|android|sistem operasi seluler|Hardware & Software|الْعَتَادُ وَالْبَرَامِجُ
 300|USB|yu-es-bi|port perangkat serbaguna|Hardware & Software|الْعَتَادُ وَالْبَرَامِجُ
-301|Flash disk|fles disk|penyimpan portabel|Hardware & Software|الْعَتَADU وَالْبَرَامِجُ
+301|Flash disk|fles disk|penyimpan portabel|Hardware & Software|الْعَتَادُ وَالْبَرَامِجُ
 302|أَمْنٌ|amn|keamanan|Keamanan Digital|الْأَمْنُ الرَّقْمِيُّ
 303|حِمَايَةٌ|himāyah|perlindungan|Keamanan Digital|الْأَمْنُ الرَّقْمِيُّ
 304|خُصُوصِيَّةٌ|khushūshiyyah|privasi|Keamanan Digital|الْأَمْنُ الرَّقْمِيُّ
